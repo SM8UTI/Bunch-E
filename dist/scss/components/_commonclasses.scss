@@ -1,0 +1,17 @@
+@use "../util/" as *;
+
+.p-8{
+    padding-inline: 4rem;
+}
+
+.center{
+    width: 100%;
+    max-width: 1600px;
+    margin-inline: auto;
+}
+
+@include breakpoint-down(mobile) {
+    .p-8{
+        padding-inline: 1rem;
+    }
+}

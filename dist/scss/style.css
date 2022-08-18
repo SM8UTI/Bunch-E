@@ -1,6 +1,8 @@
 :root {
   --bg-neutral:#fff;
   --bg-blue:#08D9D6;
+  --bg-dark-blue-2:rgb(38, 64, 63,0.2);
+  --bg-dark-blue:rgb(38, 64, 63);
   --bg-black:#0C0D0E;
   --bg-text:#9E9E9E;
 }
@@ -10,6 +12,8 @@
       sans-serif;
   --ff-secondary:"Poppins",
       sans-serif;
+  --ff-logo:"Passero One",
+      cursive;
 }
 
 *, *::after, *::before {
@@ -35,6 +39,7 @@ h1, h2, h3 {
 }
 
 a, a:focus {
+  color: var(--bg-neutral);
   text-decoration: none;
 }
 
@@ -45,4 +50,175 @@ li {
 img {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.p-8 {
+  padding-inline: 4rem;
+}
+
+.center {
+  width: 100%;
+  max-width: 1600px;
+  margin-inline: auto;
+}
+
+@media (max-width: 47.937rem) {
+  .p-8 {
+    padding-inline: 1rem;
+  }
+}
+header {
+  padding-block: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .logo {
+  font-family: var(--ff-logo);
+  font-size: 2rem;
+}
+header .logo span {
+  color: var(--bg-blue);
+}
+header .menu-btn {
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+header .menu-btn p {
+  font-weight: 400;
+  font-size: 1rem;
+}
+header .menu-btn .menu {
+  transition: all 1000ms ease-in-out;
+  display: inline-block;
+}
+header .menu-btn .close {
+  transition: all 1000ms ease-in-out;
+  display: none;
+}
+header .menu-btn .ham {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.5rem;
+  width: 50px;
+  aspect-ratio: 1/1;
+  background-color: transparent;
+}
+header .menu-btn .ham .line {
+  width: 100%;
+  height: 0.4rem;
+  border-radius: 50px;
+  background-color: var(--bg-blue);
+  transition: all 800ms ease-in-out;
+  transform-origin: -1px 3px;
+}
+header .menu-btn .ham .line-1 {
+  width: 80%;
+  align-self: flex-end;
+}
+header .menu-btn .ham .line-3 {
+  width: 40%;
+  align-self: flex-end;
+}
+header .menu-btn.active .menu {
+  display: none;
+}
+header .menu-btn.active .close {
+  color: var(--bg-black);
+  display: inline-block;
+}
+header .menu-btn.active .line {
+  background-color: var(--bg-black);
+}
+header .menu-btn.active .line-1 {
+  width: 100%;
+  transform: rotate(405deg);
+}
+header .menu-btn.active .line-2 {
+  width: 0%;
+}
+header .menu-btn.active .line-3 {
+  width: 100%;
+  transform: rotate(-405deg);
+}
+header .navbar {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 0%;
+  min-height: 100vh;
+  background-color: var(--bg-blue);
+  overflow: hidden;
+  transition: all 1000ms ease-in-out;
+}
+header .navbar .social-links {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 10vh;
+  min-height: 100vh;
+  gap: 2rem;
+  border-right: 2px solid var(--bg-dark-blue-2);
+  z-index: 9999;
+}
+header .navbar .social-links svg {
+  fill: var(--bg-black);
+  opacity: 50%;
+}
+header .navbar .social-links svg:hover {
+  fill: var(--bg-dark-blue);
+}
+header .navbar .nav-links {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  min-height: 100vh;
+}
+header .navbar .nav-links li a {
+  position: relative;
+  font-family: var(--ff-secondary);
+  font-size: 1.7rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  opacity: 80%;
+  text-transform: uppercase;
+  color: var(--bg-black);
+  transition: all 450ms ease-in-out;
+}
+header .navbar .nav-links li a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  width: 0%;
+  height: 0.3rem;
+  padding: 0rem;
+  transform: translateY(-50%);
+  transition: all 500ms ease-in-out;
+  background-color: var(--bg-neutral);
+}
+header .navbar .nav-links li a:hover, header .navbar .nav-links li a:focus {
+  transform: scale(1.3);
+  color: var(--bg-dark-blue);
+}
+header .navbar .nav-links li a:hover::after, header .navbar .nav-links li a:focus::after {
+  width: 100%;
+}
+header .navbar.active {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
