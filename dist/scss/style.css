@@ -30,8 +30,9 @@ body {
   position: relative;
   background-color: var(--bg-black);
   font-family: var(--ff-main);
-  overflow-y: hidden;
+  overflow-x: hidden;
   color: var(--bg-neutral);
+  height: 20000px;
 }
 
 h1, h2, h3 {
@@ -68,10 +69,14 @@ img {
   }
 }
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
   padding-block: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: var(--bg-black);
 }
 header .logo {
   font-family: var(--ff-logo);
@@ -221,4 +226,8 @@ header .navbar .nav-links li a:hover::after, header .navbar .nav-links li a:focu
 }
 header .navbar.active {
   width: 100%;
+}
+
+header.sticky {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }/*# sourceMappingURL=style.css.map */

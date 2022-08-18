@@ -12,8 +12,9 @@ body{
     position: relative;
     background-color: var(--bg-black);
     font-family: var(--ff-main);
-    overflow-y: hidden;
+    overflow-x: hidden;
     color: var(--bg-neutral);
+    height: 20000px;
 }
 
 h1,h2,h3{
