@@ -1,0 +1,33 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 100%;
+}
+
+body{
+    position: relative;
+    background-color: var(--bg-black);
+    font-family: var(--ff-main);
+    overflow-y: hidden;
+    color: var(--bg-neutral);
+}
+
+h1,h2,h3{
+    font-size: 2rem;
+}
+
+a,a:focus{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+img{
+    object-fit: cover;
+}

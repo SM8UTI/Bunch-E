@@ -1,1 +1,48 @@
-/*# sourceMappingURL=style.css.map */
+:root {
+  --bg-neutral:#fff;
+  --bg-blue:#08D9D6;
+  --bg-black:#0C0D0E;
+  --bg-text:#9E9E9E;
+}
+
+:root {
+  --ff-main:"Fira Sans",
+      sans-serif;
+  --ff-secondary:"Poppins",
+      sans-serif;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  position: relative;
+  background-color: var(--bg-black);
+  font-family: var(--ff-main);
+  overflow-y: hidden;
+  color: var(--bg-neutral);
+}
+
+h1, h2, h3 {
+  font-size: 2rem;
+}
+
+a, a:focus {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=style.css.map */
