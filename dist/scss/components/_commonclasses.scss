@@ -10,6 +10,35 @@
     margin-inline: auto;
 }
 
+.btn{
+    width: max-content;
+    position: relative;
+    font-family: var(--ff-secondary);
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 1rem 2rem;
+    transition: color 1000ms ease-in-out;
+    color: var(--bg-black);
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -75px;
+        width: 150%;
+        height: 100%;
+        background-color: var(--bg-blue);
+        z-index: -1;
+        transition: width 500ms ease-in-out;
+    }
+
+    &:hover,&:focus{
+        color: var(--bg-blue);
+        &::before{
+            width: 80px;
+        }
+    }
+}
+
 @include breakpoint-down(mobile) {
     .p-8{
         padding-inline: 1rem;

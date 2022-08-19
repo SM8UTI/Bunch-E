@@ -1,2 +1,125 @@
 @use "../util/" as *;
 
+.hero{
+    z-index: 99;
+   width: 100%;
+   min-height: 100vh;
+   margin-top: 8rem;
+
+   &-container{
+        display: grid;
+        gap: 2rem;
+       &-text{
+            z-index: 2;
+           display: flex;
+           flex-direction: column;
+           justify-content: left;
+           gap: 1rem;
+           line-height: 1.4;
+
+            h1{
+                line-height: 1.2;
+                font-family: var(--ff-main);
+                font-size: clamp(3rem,6vw,4rem);
+                text-transform: uppercase;
+                letter-spacing: 1px;
+
+                span{
+                    color: var(--bg-blue);
+                    -webkit-text-stroke: 1px;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+
+            p{
+                color: var(--bg-text);
+                font-size: clamp(0.9rem,2vw,1.1rem);
+                font-weight: 400;
+                letter-spacing: 1px;
+            }
+
+            .btn-project{
+                margin-block: 1rem;
+                z-index: 99;
+                font-size: 1rem;
+            }
+    }
+
+    &-image{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 1rem;
+        img{
+            opacity: 90%;
+            max-width: 100%;
+            // max-width: 800px;
+            height: 500px;
+        }
+        &-text{
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            gap: 1rem;
+            .arrow{
+                background-color: var(--bg-blue);
+                width: min-content;
+                padding: 0.8rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                span{
+                    font-size: 2.5rem;
+                    font-weight: 600;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+
+
+    }
+
+   }
+
+   @include breakpoint(large){
+    &-container{
+        grid-template-columns:1fr 1fr;
+
+        &-image{
+            
+            flex-direction: column;
+        }
+    }
+   }
+   @include breakpoint(x-large){
+    margin-top: 5rem;
+    &-container{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        place-items: center;
+
+        &-text{
+            grid-column: 1/ span 3;
+            grid-row: 1;
+            h1{
+                span{
+                    -webkit-text-stroke: 2px;
+                }
+            }
+            P{
+                width: max-content;
+            }
+        }
+
+        &-image{
+            grid-row: 1;
+            grid-column: 3/-1;
+            flex-direction: column;
+
+            img{
+                opacity: 40%;
+            }
+        }
+    }
+   }
+
+
+}

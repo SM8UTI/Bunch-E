@@ -1,6 +1,8 @@
 @use "../util/" as *;
 
 header{
+    z-index: 9999;
+    width: 100%;
     position: fixed;
     top: 0;
     left: 0;
