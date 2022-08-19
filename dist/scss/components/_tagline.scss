@@ -1,0 +1,41 @@
+@use "../util/" as *;
+
+.tagline{
+    width: 100%;
+    max-width: 1225px;
+    min-height: 35vh;
+    background-color: var(--bg-blue);
+    padding-block: 2rem;
+    position: relative;
+
+    h2{
+        width: 100%;
+        color: var(--bg-black);
+        text-align: center;
+        font-size: clamp(1.1rem, 4vw, 1.4rem);
+        font-weight: 500;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        padding: 1rem 3rem;
+    }
+
+    &-icon-1{
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 6rem;
+        transform: rotate(180deg);
+        opacity: 50%;
+    }
+    
+    &-icon-2{
+        opacity: 50%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        font-size: 6rem;
+    }
+}
+

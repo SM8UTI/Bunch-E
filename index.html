@@ -26,7 +26,7 @@
 
     <header class="p-8  primary-header">
         <h1 class="logo"><span>B</span>unch-E</h1>
-        <a href="#" class="menu-btn" onclick="togglemenu()">
+        <div class="menu-btn" onclick="togglemenu()">
             <p class="menu">Menu</p>
             <p class="close">Close</p>
             <div class="ham">
@@ -34,7 +34,7 @@
                 <div class="line line-2"></div>
                 <div class="line line-3"></div>
             </div>
-        </a>
+        </div>
         <div class="navbar">
             <ul class="social-links">
                 <!-- // instagram -->
@@ -81,13 +81,14 @@
             </ul>
             <ul class="nav-links">
                 <li><a href="#" onclick="togglemenu()">About</a></li>
-                <li><a href="#" onclick="togglemenu()">Services</a></li>
+                <li><a href="#services" onclick="togglemenu()">Services</a></li>
                 <li><a href="#" onclick="togglemenu()">Projects</a></li>
                 <li><a href="#" onclick="togglemenu()">Contact</a></li>
             </ul>
         </div>
     </header>
     <main>
+        <!-- hero  -->
         <section class="hero p-8 center">
             <div class="hero-container">
                 <div class="hero-container-text">
@@ -111,6 +112,43 @@
                 </div>
             </div>
         </section>
+
+        <!-- //quotes -->
+        <section class="tagline p-8 center m-8">
+            <span class="tagline-icon-1 material-symbols-outlined">
+                format_quote
+            </span>
+            <h2>We love create experiences that enable people to connect express themselves and extablish relationships
+            </h2>
+            <span class="tagline-icon-2 material-symbols-outlined">
+                format_quote
+            </span>
+        </section>
+
+        <!-- Services -->
+        <section class="services p-8 center">
+            <div class="title">
+                <div class="title-text">
+                    <h1>We Do Everything</h1>
+                    <h2>Giving Your Business Some Great Ideas</h2>
+                </div>
+                <p>Services</p>
+            </div>
+            <div class="services-container" id="services">
+                <div class="services-container-image">
+
+                </div>
+                <ul class="services-container-text">
+                    <li>Web Development</li>
+                    <li>App Development</li>
+                    <li>UI/UX Design</li>
+                    <li>Video Editing</li>
+                    <li>Product Design</li>
+                    <li>Graphic Design</li>
+                </ul>
+            </div>
+        </section>
+
     </main>
 
     <script src="dist/js/main.js" defer></script>

@@ -1,9 +1,12 @@
 @use "../util/" as *;
 
 .p-8{
-    padding-inline: 4rem;
+    padding-inline: 3rem;
 }
 
+.m-8{
+    margin-block: 3rem;
+}
 .center{
     width: 100%;
     max-width: 1600px;

@@ -23,6 +23,7 @@ header{
     }
 
     .menu-btn{
+        cursor: pointer;
         z-index: 9999;
         display: flex;
         align-items: center;
@@ -102,7 +103,7 @@ header{
 
     .navbar{
         z-index: 999;
-        position: fixed;
+        position: absolute;
         top: 0;
         right: 0;
         display: flex;
