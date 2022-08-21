@@ -9,3 +9,10 @@ function togglemenu(){
     menu.classList.toggle('active')
     nav.classList.toggle('active')
 }
+
+function hoverImage(img1,text){
+    const imghv = document.getElementById('ImageHv')
+    const ichv = document.getElementById('IconHv')
+    imghv.src = `${img1}`
+    // ichv.innerText = `${text}`
+}

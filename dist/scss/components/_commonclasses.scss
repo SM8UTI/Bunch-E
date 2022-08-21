@@ -5,7 +5,11 @@
 }
 
 .m-8{
-    margin-block: 3rem;
+    margin-block: 4rem;
+}
+
+.m-15{
+    margin-top: 12rem;
 }
 .center{
     width: 100%;
@@ -42,6 +46,112 @@
     }
 }
 
+.title{
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 4rem;
+    // align-items: center;
+    // justify-content: space-between;
+
+    &-text{
+        position: relative;
+        letter-spacing: 1px;
+        padding-block: 0.5rem;
+        h1{
+            font-size: 1.5rem;
+        }
+        h2{
+            font-size: 0.8rem;
+            font-weight: 400;
+            margin-left: 3.3rem;
+            color: var(--bg-text);
+        }
+
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -90px;
+            width: 135px;
+            height: 100%;
+            z-index: -1;
+            background-color: var(--bg-blue);
+        }
+    }
+    p{
+        display: inline-block;
+        align-self: flex-end;
+        font-size: 1rem;
+        position: relative;
+        &::before{
+            content: '';
+             position: absolute;
+             top: 50%;
+             left: -40px;
+             transform: translateY(-50%);
+             width: 50%;
+             height: 0.3rem;
+             background-color: var(--bg-blue);
+             opacity: 40%;
+        }
+
+        &::after{
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -40px;
+            transform: translateY(-50%);
+            width: 0.6rem;
+            aspect-ratio: 1/1;
+            background-color: var(--bg-blue);
+            border-radius: 50px;
+        }
+    }
+}
+
+.text-main-right,.text-main-left{
+    position: relative;
+    
+    h1{
+        position: absolute;
+        font-size: 3rem;
+        color: var(--bg-neutral);
+            -webkit-text-stroke: 1px;
+            -webkit-text-fill-color: transparent;
+        opacity: 20%;
+    }
+}
+
+
+.text-main-left{
+    margin-top: 4rem;
+    h1{
+        top: 0;
+        left: 1rem;
+        text-align: left;
+    }
+
+    @include breakpoint(mobile){
+        h1{
+            left: 4rem;
+        }
+    }
+}
+.text-main-right{
+    margin-top: 6rem;
+    h1{
+        top: 0;
+        right: 1rem;
+        text-align: right;
+    }
+
+    @include breakpoint(mobile){
+        h1{
+            right: 4rem;
+        }
+    }
+}
 @include breakpoint-down(mobile) {
     .p-8{
         padding-inline: 1rem;
