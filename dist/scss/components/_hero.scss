@@ -52,6 +52,7 @@
         flex-direction: column;
         gap: 1rem;
         img{
+            border-radius: 10px;
             opacity: 90%;
             max-width: 100%;
             // max-width: 800px;
@@ -64,6 +65,8 @@
             flex-direction: row;
             gap: 1rem;
             .arrow{
+                border-radius: 5px;
+                overflow: hidden;
                 background-color: var(--bg-blue);
                 width: min-content;
                 padding: 0.8rem;

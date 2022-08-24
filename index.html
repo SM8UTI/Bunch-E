@@ -17,6 +17,9 @@
     <!-- google icons  -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- swiper  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <!-- css -->
     <link rel="stylesheet" href="dist/scss/style.css">
 
@@ -82,7 +85,7 @@
             <ul class="nav-links">
                 <li><a href="#about" onclick="togglemenu()">About</a></li>
                 <li><a href="#services" onclick="togglemenu()">Services</a></li>
-                <li><a href="#" onclick="togglemenu()">Projects</a></li>
+                <li><a href="#project" onclick="togglemenu()">Projects</a></li>
                 <li><a href="#" onclick="togglemenu()">Contact</a></li>
             </ul>
         </div>
@@ -144,9 +147,6 @@
                     <div class="image-overlay">
 
                     </div>
-                    <!-- <span class="material-symbols-outlined" id="IconHv">
-                        laptop_mac
-                    </span> -->
                 </div>
                 <ul class="services-container-text">
                     <li
@@ -218,14 +218,41 @@
                 </div>
             </div>
         </section>
-        <!-- text 
-        <div class="text-main-left center">
-            <h1>Bunch Entertainment</h1>
-        </div> -->
+        <!-- project  -->
+        <section class="project center" id="project">
+            <div class="project-scroll scroll-text">
+                <ul>
+                    <li>Latest Projects</li>
+                    <li>Latest Projects</li>
+                    <li>Latest Projects</li>
+                    <li>Latest Projects</li>
+                    <li>Latest Projects</li>
+                    <li>Latest Projects</li>
+                    <li>Latest Projects</li>
+                    <li>Latest Projects</li>
+                    <li>Latest Projects</li>
+                    <li>Latest Projects</li>
+                    <li>Latest Projects</li>
+                    <li>Latest Projects</li>
+                    <li>Latest Projects</li>
+                </ul>
+            </div>
+            <div class="title p-8">
+                <div class="title-text">
+                    <h2>We do what we do because we love it and are dedicated to creating meaningful work.</h2>
+                </div>
+            </div>
+            <div class="project-container swiper p-8">
+                <div class="swiper-wrapper">
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
 
     </main>
 
     <script src="dist/js/main.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 </body>
 
 </html>
