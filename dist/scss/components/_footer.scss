@@ -1,0 +1,25 @@
+@use "../util/" as *;
+
+footer{
+    padding-block: 3rem;
+    p{
+        width: 100%;
+        font-size: 1rem;
+        letter-spacing: 1px;
+        position: relative;
+
+        a{
+            color: var(--bg-blue);
+        }
+
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            right: 0;
+            width: 100%;
+            height: 0.2rem;
+            background-color: var(--bg-blue);
+        }
+    }
+}

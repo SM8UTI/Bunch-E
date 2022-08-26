@@ -76,44 +76,11 @@ function hoverImage(img1,text){
     // ichv.innerText = `${text}`
 }
 
-function projectFunction(){
+var swiper = new Swiper(".project-container", {
+spaceBetween: 40,
+pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+},
+});
 
-    const mediaQuery = window.matchMedia('(min-width: 768px)')
-
-    function handleTabletChange(e) {
-    // Check if the media query is true
-    if (e.matches) {
-        var swiper = new Swiper(".project-container", {
-        spaceBetween: 40,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        });
-    }
-    }
-    // Register event listener
-    mediaQuery.addListener(handleTabletChange)
-
-    // Initial check
-    handleTabletChange(mediaQuery)
-
-}
-const media = window.matchMedia('(min-width: 768px)')
-
-const handleTabletChange() => {
-        if (e.matches) {
-        var swiper = new Swiper(".project-container", {
-        spaceBetween: 40,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        });
-    }
-}
-
-media.addListener(handleTabletChange)
-
-    // Initial check
-handleTabletChange(mediaQuery)

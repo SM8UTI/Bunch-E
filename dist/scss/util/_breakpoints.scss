@@ -9,7 +9,7 @@ $breakpoints-down: (
     "large":63.9375em, // 1023 px
     "x-large":76.25rem,
     "small":50.625em,
-    "mobile":47.937rem, // 767px
+    "mobile":48rem, // 767px
 );
 
 @mixin breakpoint-down($size) {
